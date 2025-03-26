@@ -1,0 +1,49 @@
+body{
+    text-align: left;
+    font-family: montserrat;
+    background-color:#FAF9F6;
+    border: 0px;
+    box-shadow:5px 5px 69px -11px #F7C1A8;
+    border-radius: 40px;
+    margin:50px;
+    padding: 30px;
+    font-family: "DM Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    line-height: 1.2;
+    font-style: normal;
+    font-size:22px
+}
+
+#description{
+    text-align: center;
+}
+
+#header{
+    background-color: bisque;
+    color: black;
+    padding: 40px;
+    text-align: center;
+    margin:20px;
+    border-radius: 40px;
+    border: 0px;
+}
+
+#macimage{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius:15px;
+}
+
+.ingredient{
+    background-color: bisque;
+    color: black;
+    font-size: 25px;
+    border-radius: 40px;
+    border: 0px;
+    margin:20px;
+    padding: 20px;
+}

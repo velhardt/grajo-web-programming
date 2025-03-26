@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quick-Reference Guide</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <h1 id="head">
+        HTML and CSS Quick-Reference Guide
+    </h1>
+
+    <h2>HTML Tags</h2>
+
+    <div class="section">
+        <h3>Header Tags</h3>
+        <p>
+            Header tags are, as its name suggests, used for headings. There are several sizes you can use for headings, from
+            &lt;h1&gt; to &lt;h6&gt;, with &lt;h1&gt; being the biggest, and &lt;h6&gt; being the smallest.
+        </p>
+        
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;h1&gt;This is a large heading!&lt;/h1&gt;
+    &lt;h4&gt;This is a smaller heading!&lt;/h4&gt;
+    &lt;h6&gt;This is the smallest heading!&lt;/h6&gt;
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Paragraph Tag</h3>
+        <p>
+            Commonly used to display blocks of text.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;p&gt;
+    Death is only meaningless if it does not change us, Vis.
+    &lt;/p&gt;
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Acronym Tag</h3>
+        <p>
+            Used to add an acronym to text, which will display when the user hovers over the selected text.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;acronym title="The Way of Kings"&gt;TWOK&lt;/acronym&gt;
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Break Tag</h3>
+        <p>
+            Used to break up text, creating a new line.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;p&gt;
+    This is my first line.
+    &lt;br&gt;
+    This is my second line.
+    &lt;/p&gt;
+            </code></pre>
+        </div>
+
+    </div>
+    
+    <div class="section">
+        <h3>Center Tag</h3>
+        <p>
+            A styling tag, which centers text nested within it.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;center&gt;
+    &lt;p&gt;
+    My text is centered!
+    &lt;/p&gt;
+    &lt;/center&gt;
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Marquee Tag</h3>
+        <p>
+            Creates a scrolling text area, which moves across the page. You can specify the direction.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;marquee&gt;I'm scrolling right now.&lt;/marquee&gt;
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Image Tag</h3>
+        <p>
+            Allows you to insert an image.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;image src="C:\Users\user\Desktop\example.png"&gt;
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Superscript Tag</h3>
+        <p>
+            Creates text a half-line above the bottom margin.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;sup&gt;I'm small.&lt;/sup&gt;
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Subscript Tag</h3>
+        <p>
+            Creates text a half-line below the bottom margin.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;sup&gt;I'm small but I'm on the bottom now.&lt;/sup&gt;
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Input Tag</h3>
+        <p>
+           Creates input fields with varying input types.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    &lt;input type="button"&gt; I'm a button.
+    &lt;input type="checkbox"&gt; Tick this.
+    &lt;input type="color"&gt; Choose a color!
+            </code></pre>
+        </div>
+
+    </div>
+
+    <br><br>
+    <h2>CSS Properties</h2>
+
+    <div class="section">
+        <h3>Color Property</h3>
+        <p>
+           Changes text color.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    p{
+        color: blue;
+    }
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Background Color Property</h3>
+        <p>
+           Changes text color.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    p{
+        background-color: purple;
+    }
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Font Size Property</h3>
+        <p>
+           Changes the size of text
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    p{
+        font-size: 20px;
+    }
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Padding Property</h3>
+        <p>
+           Adds space inside an element, between the border and contents inside the element.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    .element{
+        padding: 22px;
+    }
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Margin Property</h3>
+        <p>
+           Adds space outside the element, between this element and other elements.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    .element{
+        margin: 5px;
+    }
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Border Property</h3>
+        <p>
+           Creates a border around an element.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    .element{
+        border: 2px solid black;
+    }
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Text Align Property</h3>
+        <p>
+           Adjusts how text is aligned inside an element.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    div{
+        text-align: left;
+    }
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h3>Position Property</h3>
+        <p>
+           Adjusts how an element is positioned.
+        </p>
+        <div class="example">
+            Example:
+            <pre><code>
+    .box{
+        position: relative;
+    }
+            </code></pre>
+        </div>
+
+    </div>
+</body>
+</html>
