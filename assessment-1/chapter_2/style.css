@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,900;1,900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+#header{
+    border: 0px;
+    background-color: #3E5879;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+hr{
+    width: 100%;
+    margin: 40px;
+    margin-left: 0px;
+}
+
+li{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#header-text{
+    inline-size: 1350px;
+    overflow-wrap: break-word;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 90px;
+    font-style: normal;
+    padding-left: 155px;
+    padding-bottom: 0px;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+body{
+    background-color: #072438;
+    color: #DFD0B8;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+}
+
+.section{
+    padding: 80px;
+    background-color: #153448;
+    box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.39);
+    margin: 80px;
+    border-radius: 5px;
+}
+
+.section-content{
+    font-size: 24px;
+    font-family: "Vollkorn", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    inline-size: 1200px;
+    padding: 10px;
+    padding-top: 0px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#reviews dd{
+    font-style: italic;
+}
+
+.navbar{
+    background: #F5EEDC;
+    padding: 12px 25px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+}
+
+.web-button{
+    text-align: right;
+}
+
+.site-button{
+    text-align: left;
+}
+
+.site-button a{
+    font-family: "Vollkorn", serif;
+    font-weight: 800;
+    color: #27548A;
+    text-decoration: none;
+    padding:  10px 15px;
+    font-size: 20px;
+    transition: background 0.3s, color 0.3s, font-weight 0.3s;
+}
+
+.site-button a:hover{
+    background-color: #27548A;
+    color: #F5EEDC;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.web-button a{
+    font-family: "Vollkorn", serif;
+    font-weight: 800;
+    color: #27548A;
+    text-decoration: none;
+    padding:  10px 15px;
+    margin-right: 50px;
+    font-size: 20px;
+    transition: background 0.3s, color 0.3s, font-weight 0.3s;
+}
+
+.web-button a:hover{
+    background-color: #27548A;
+    color: #F5EEDC;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.directory-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    width: max-content;
+    margin: auto;
+}
+
+.directory-button{
+    color: #DFD0B8;
+    font-size: 46px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    text-transform: uppercase;
+    inline-size: 600px;
+    padding: 80px;
+    background-color: #153448;
+    box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.39);
+    text-shadow: 0px 3px 4px rgba(0,0,0,0.45);
+    margin:30px 25px;
+    border-radius: 10px;
+    text-align: center;
+    text-justify: inter-word;
+    text-decoration: none;
+    transition: transform 0.1s ease-in-out;
+}
+
+.directory-button:hover{
+    transform: scale(1.025);
+}
+
+.directory-button:last-child:nth-child(odd){
+    grid-column: span 2;
+    justify-self: center;;
+}

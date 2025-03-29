@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Karma:wght@300;400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: blanchedalmond;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    color: #777777;
+    font-family: "Karma", serif;
+    font-weight: 450;
+    font-style: italic;
+}
+
+.head{
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 145px;
+    margin-bottom: 0px;
+    background: url("images/chrome-overlay.jpg");
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 30px rgba(255,255,255,0.52);
+    margin-top: -130px;
+}
+
+.head sup{
+    font-size: 65px;
+}
+
+.image-grid{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.image-box{
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-box img{
+    max-width: 500px;
+    max-height: 500px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    -webkit-mask-image: radial-gradient(circle,  
+    rgba(0, 0, 0, 1) 20%, 
+    rgba(0, 0, 0, 0.9) 40%,
+    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(circle,  
+    rgba(0, 0, 0, 1) 20%,  
+    rgba(0, 0, 0, 0.9) 40%,  
+    rgba(0, 0, 0, 0.5) 60%,  
+    rgba(0, 0, 0, 0) 100%);
+    filter: saturate(3);
+}
+
+.grain-overlay{
+    height: 100vh;
+    background-image: url("images/grain.jpg")
+}
+
+.grain-overlay::after{
+    background-image: url("images/grain.jpg");
+    filter: grayscale(100%) contrast(110%);
+    content: "";
+    height: 300%;
+    left: -50%;
+    top: -100%;
+    width: 300%;
+    opacity: 0.105;
+    position: fixed;
+    animation: grain 8s steps(8) infinite;
+}
+
+
+
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  }
