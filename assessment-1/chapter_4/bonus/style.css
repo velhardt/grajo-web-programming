@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Mandali&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #DBDBDB;
+    color: #181C14;
+    font-family: "Mandali", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.main-header{
+    box-sizing: border-box;
+    padding: 1px 22px;
+    width: 100%;
+    background-color: #213555;
+    color: #F0F0F0;
+}
+
+.sidebar{
+    width: 250px;
+    background-color: #4F709C;
+    color: #F0F0F0;
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 27px;
+    padding: 20px;
+}
+
+.sidebar a{
+    transition: 0.3s;
+}
+
+.sidebar a:hover{
+    padding-left: 10px;
+}
+
+.content{
+    margin: 0 10px;
+    margin-left: 270px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.column{
+    font-size: 30px;
+    flex: 1;
+    text-align: left;
+    border-radius: 10px;
+    height: 83vh;
+    padding: 1px 25px;
+    background-color: #F1EFEC;
+    box-shadow: 0px 5px 9px 0px #6C6C6C;
+}
+
+.column ul{
+    list-style: none;
+}
+
+.column ul li{
+    margin-bottom: 40px;
+}
+
+.footer{
+    color: #FFFFFF;
+    display: flex;
+    background: #213555;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    justify-content: flex-end;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
