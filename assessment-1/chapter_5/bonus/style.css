@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Silkscreen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+    color: #DAFFFB;
+    overflow-y: hidden;
+}
+
+.head{
+    margin: 20px;
+    padding: 2px 30px;
+    border: 1px solid #A1E3F9;
+    box-shadow: 0px 0px 15px 2px rgba(207,241,249,0.64);
+    text-shadow: 0px 0px 10px rgba(207,241,249,0.64);
+}
+
+hr{
+    border: 1px solid #A1E3F9;
+    text-shadow: 0px 0px 10px rgba(207,241,249,0.64);
+    margin: 20px;
+}
+
+.page-container{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+.text-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.audio-container{
+    display: flex;
+    flex: 15;
+    flex-direction: column;
+}
+
+.tts{
+    font-family: "Silkscreen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    padding: 40px;
+    margin: 20px;
+    margin-right: 5px;
+    height: 400px;
+    width: 350px;
+    box-shadow: 0px 0px 5px 1px rgba(207,241,249,0.64);
+    text-shadow: 0px 0px 10px rgba(207,241,249,0.64);
+    background-color: #081219;
+    color: #DAFFFB;
+    border: 1px solid #A1E3F9;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+#tts-button{
+    display: block;
+    font-family: "Silkscreen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    padding: 40px;
+    margin: 20px;
+    margin-top: -5px;
+    width: 432px;
+    height: 140px;
+    box-shadow: 0px 0px 5px 1px rgba(207,241,249,0.64);
+    text-shadow: 0px 0px 10px rgba(207,241,249,0.64);
+    background-color: #081219;
+    color: #DAFFFB;
+    border: 1px solid #A1E3F9;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+#tts-button:hover{
+    transform: scale(1.01);
+    color: white;
+    border-color: white;
+    font-size: 18px;
+    box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+}
+
+.button-grid{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-button{
+    font-family: "Silkscreen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    padding: 40px;
+    margin-bottom: 10px;
+    height: 200px;
+    flex: 1 1 calc(33.33% - 20px);
+    box-shadow: 0px 0px 5px 1px rgba(207,241,249,0.64);
+    text-shadow: 0px 0px 10px rgba(207,241,249,0.64);
+    background-color: #081219;
+    color: #DAFFFB;
+    border: 1px solid #A1E3F9;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.audio-button:hover{
+    transform: scale(1.01);
+    color: white;
+    border-color: white;
+    font-size: 18px;
+    box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+}
+
+.border{
+    margin:20px;
+    border: 1px solid #A1E3F9;
+    box-shadow: 0px 0px 15px 2px rgba(207,241,249,0.64);
+
+    background-color: #081219;
+    height: 95vh;
+}
+
+.nav-buttons{
+    margin: 0 20px;
+}
+
+#prev, #next{
+    font-family: "Silkscreen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: -100px;
+    width: 40px;
+    box-shadow: 0px 0px 5px 1px rgba(207,241,249,0.64);
+    text-shadow: 0px 0px 10px rgba(207,241,249,0.64);
+    background-color: #081219;
+    color: #DAFFFB;
+    border: 1px solid #A1E3F9;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+}

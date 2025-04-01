@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #F3EFE0;
+    text-shadow: 0px 3px 0px rgba(0,0,0,0.59);
+}
+
+.main{
+    background: #434242;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    width: 455px;
+    box-shadow: 0px 0px 12px 2px #000000;
+}
+
+input{
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: normal;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #22A39F;
+    background-color: #222222;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.59);
+    color: #F3EFE0;
+    border-radius: 5px;
+    font-size: 16px;    
+    margin-bottom: 30px;
+}
+
+input:focus{
+    border-color: #007bff;
+    outline: none;
+}
+
+.result-box{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #222222;
+    margin: 30px 10px;
+    border: 2px solid #2DAA9E;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.59);
+}
+
+button{
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    background-color: #22A39F;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 95%;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.59);
+}
+
+
+button:hover{
+    transform: scale(1.01);
+    background-color: #48CFCB;
+}
+
+
+#total-cost{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}

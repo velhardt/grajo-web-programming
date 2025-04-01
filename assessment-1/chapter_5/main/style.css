@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Karma:wght@300;400;500;600;700&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head{
+    position: absolute;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 120px;
+    color: white;
+    text-align: center;
+    background: url("files/silvergun.jpg");
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 6px 20px rgba(0,0,0,0.6);
+}
+
+#img{
+    max-width: 250px;
+    max-height: 150px;
+    width: 250px;
+    height: 150px;
+}
+
+.centered-video{
+    display: block;
+    padding: 0px;
+    height: auto;
+    z-index: -9999;
+    object-fit: cover;
+    width: 1555px;
+    height: 1555px;
+}
