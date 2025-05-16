@@ -1,0 +1,249 @@
+.body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+}
+
+.new-book-grid{
+    margin: 24px;
+    height: 95vh;
+}
+
+.main-header{
+    outline: 1px solid #DBD1BD;
+    height: 22vh;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-header h2{
+    font-family: "Monarque-Regular", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1rem, 4.5vw, 3.5rem);
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+
+
+.main-header h3{
+    font-family: "Cormorant", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1rem, 1.6vw, 3.5rem);
+    letter-spacing: -1.2px;
+    margin-top: -45px;
+}
+
+/*for fade in on load*/
+
+.header-content{
+    display: flex;
+}
+
+.home-button{
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 40px;
+    position: relative;
+    justify-content: flex-end;
+    transition: transform 1s ease-in-out;
+
+}
+
+.home-button img{
+    height: 80px;
+    transform: scaleY(0);
+    opacity: 0;
+    filter: invert(96%) sepia(8%) saturate(713%) hue-rotate(332deg) brightness(91%) contrast(87%);
+    animation: icon-anim 1s ease forwards, opacity-fade 2s ease forwards;
+    transform-origin: center;
+    transition: transform 1s ease-in-out;
+    display: block;
+    animation-delay: 1s;
+}
+
+.image-wrapper{
+    transition: transform 1s ease-in-out;
+    display: block;
+    line-height: 0;
+}
+
+.image-wrapper:hover{
+    transform: scale(1.3) rotate(360deg);
+}
+
+.shelf-grid{
+    display: flex;
+}
+
+.shelf-book{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid #DBD1BD;
+    flex: 1;
+    height: 73.5vh;
+    align-items: center;
+    transition: flex 1.3s cubic-bezier( 0.645, 0.045, 0.355, 1 );
+}
+
+.shelf-book .spine-text{
+    font-family: "Cormorant", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 66px;
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+    text-orientation:sideways-right;
+    text-transform: uppercase;
+    margin: auto 0;
+}
+
+.shelf-book .small{
+    font-family: "Cormorant", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 23px;
+    transform: translateY(-20px);
+    display: inline-block;
+    color: #cabda3;
+    text-align: center;
+    max-width: 250px;
+}
+
+.shelf-book > * {
+    position: relative;
+    z-index: 1;
+}
+
+.shelf-book::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 2s ease;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(1px);
+
+}
+
+.small::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: #cabda3;
+    transition: transform 1.2s cubic-bezier( 0.785, 0.135, 0.15, 0.86 );
+}
+
+.shelf-book:hover .small::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.shelf-book:hover::before{
+    opacity: 0.4;
+    
+}
+
+.shelf-book:hover{
+    cursor: pointer;
+    flex: 2;
+}
+
+.shelf-grid a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.s1::before{
+    background-image: url(../images/journal/mistborn.jpg);
+}
+
+.s2::before{
+    background-image: url(../images/journal/stormlight.jpg);
+}
+
+.s3::before{
+    background-image: url(../images/journal/elantris.jpg);
+}
+
+.s4::before{
+    background-image: url(../images/journal/warbreaker.jpg);
+}
+
+.s5::before{
+    background-image: url(../images/journal/whitesand.jpg);
+}
+
+.s6::before{
+    background-image: url(../images/journal/sixthdusk.jpg);
+}
+
+/*pop up animatiions*/
+@keyframes text-rise {
+    0% {
+        transform: translateY(200%);
+    }
+  100% {
+        transform: translateY(0);
+  }
+}
+
+@keyframes opacity-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes icon-anim {
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.header-text h2, .header-text h3{
+    overflow: hidden;
+}
+
+.header-text .text-line{
+    display: block;
+    opacity: 0;
+    transform: translateY(200%);
+    animation: 
+        text-rise 2s ease forwards,
+        opacity-fade 2.5s ease forwards;
+}
+
+.header-text h2 .text-line{
+    animation-delay: 0.2s, 0.4s;
+}
+
+.header-text h3 .text-line{
+    animation-delay: 1s, 1.2s;
+}

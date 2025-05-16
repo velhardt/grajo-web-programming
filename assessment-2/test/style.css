@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Ledger&display=swap');
+
+@font-face {
+    font-family: 'Romie';
+    src: url('font/romie.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monarque-LightItalic';
+    src: url('font/Monarque-LightItalic.ttf') format(opentype);
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monarque-Thin';
+    src: url('font/Monarque-Thin.ttf') format(opentype);
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monarque-Regular';
+    src: url('font/Monarque-Regular.ttf') format(opentype);
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler-Rmn';
+    src: url('font/Butler-Rmn.otf') format(opentype);
+    font-weight: 200;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    color: #DBD1BD;
+    background-color: #272727;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    border: 6px solid #DBD1BD;
+    box-shadow:
+      inset 0 0 0 6px #272727,   
+      inset 0 0 0 7.5px #DBD1BD;  
+    pointer-events: none; 
+    z-index: 9999;
+}
+
+.texture{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    background-repeat: repeat;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image: url(./images/texture.jpg);
+    z-index: 5000;
+}
+
+
+#sticky-header{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    outline: 1px solid #DBD1BD;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: #272727;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform 1s cubic-bezier( 0.77, 0, 0.175, 1 );
+    z-index: 9990;
+}
+
+#sticky-header.visible {
+    transform: translateY(0);
+}
+
+#sticky-header.visible h1{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#sticky-header h1{
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: 
+        opacity 1.5s ease-in-out,
+        transform 1s cubic-bezier( 0.97, -0.03, 0.13, 0.82 );
+    font-family: 'Cormorant', serif;
+    font-weight: 111;
+    font-style: normal;
+    font-size: 80px;
+}
+
+.main-container{
+    z-index: -10;
+    margin: 12px;
+    padding: 12px;
+}
+
+hr {
+    border: 1px #4b3f2f solid;
+    margin: 20px
+  } 
+
+.landing-head{
+    display: flex;
+    height: 95vh;
+    border: 2px #DBD1BD solid;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    box-shadow: inset 0 0 100px 30px rgba(0, 0, 0, 1);
+}
+
+.fade-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.6s ease;
+    z-index: 1;
+  }
+
+.landing-head img{
+    object-fit: cover;
+    z-index: 2;
+    position: absolute;
+}
+
+#inner-ellipse{
+    height: 500px;
+}
+
+#ellipse{
+    height: 580px;
+}
+
+.landing-head h1{
+    z-index: 2;
+    position: absolute;
+}
+
+#the{
+    position:relative;
+    font-style: italic;
+    top: -70px;
+    left: -120px;
+    font-family: 'Monarque-LightItalic', serif;
+    font-weight: 111;
+    font-style: normal;
+    font-size: 60px;
+}
+
+#cosmere{
+    font-size: 165px;
+    font-family: 'Monarque-Thin', serif;
+    font-weight: 400;
+    letter-spacing: -15px;
+    font-style: normal;
+    gap: -200px;
+}
+
+#cosmere span{
+    position: flex;
+    display: inline-block;
+
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    gap: 0px;
+    margin-top: -40px;
+    position: relative;
+}
+
+.head h1{
+    font-family: "Monarque-Regular", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    letter-spacing: 2px;
+}
+
+.head h2{
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    margin-top: -20px;
+    margin-bottom: 80px;
+    margin-left: 150px;
+    margin-right: 150px;
+    letter-spacing: -1px;
+}
+
+.cosmere-book-bg{
+    padding: 100px 0;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+    height: auto;
+    margin: 0 auto;
+    transform-origin: center;
+    opacity: 0;
+    transition: width cubic-bezier( 0.645, 0.045, 0.355, 1 ) 2.5s, border 1s ease-in-out, opacity 1.6s ease-in-out;
+}
+
+.cosmere-book-bg-show{
+    width: 100%;
+    border: 2px #DBD1BD solid;
+    opacity: 1;
+}
+
+.cosmere-book-bg-show .cosmere-book{
+    opacity: 1;
+    width: 400px
+}
+
+.cosmere-book-bg::before{
+    content: "";
+    position: absolute;
+    background-image: url(images/starmap.jpg);
+    background-size: cover;
+    background-position: center;
+    inset: 0;
+    filter: blur(1px);
+    z-index: -1;
+    transform: scale(1.1);
+}
+
+.cosmere-book-bg::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+}
+
+
+.cosmere-book{
+    opacity: 1;
+    cursor: pointer;
+    transition: transform 2s, width 7s ease-in-out;
+    transition-delay: 3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    width: 0;
+    z-index: 3;
+    height: 600px;
+    background-image: url(images/covers/cosmere.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 2s ease-in-out;
+    filter: drop-shadow(0px 7px 12px #000000);
+   
+}
+
+.cosmere-book:hover{
+        box-shadow: -10px 10px 20px rgba(0,0,0,0.2);
+        transform: scale(1.03);
+}
+
+.book-grid-bg{
+    padding: 40px 0;
+    background-color: #c4b08a;
+    border: 2px solid #DBD1BD;
+    margin: 20px 40px;
+}
+
+.book-grid{
+    display: flex;
+    gap: 100px;
+    padding: 100px;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+}
+
+.b1, .b2, .b3, .b4, .b5, .b6{
+    background-color: #4b3f2f;
+    height: 600px;
+    filter: drop-shadow(0px 7px 12px #000000);
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.b1{
+    background-image: url(images/covers/mistborn.jpg);
+}
+
+.b2{
+    background-image: url(images/covers/stormlight.jpg);
+}
+
+.b3{
+    background-image: url(images/covers/elantris.jpg);
+}
+
+.b4{
+    background-image: url(images/covers/warbreaker.jpg);
+}
+
+
+.b5{
+    background-image: url(images/covers/whitesand.png);
+}
+
+.b6{
+    background-image: url(images/covers/sixthdusk.png);
+}
+
+.sigil-divider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99.9%;
+    gap: 20px;
+    margin: 50px auto;
+}
+
+.sigil-divider .line{
+    flex: 1;
+    height: 2px;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
+    background: #DBD1BD;
+  }
+
+.sigil-divider .sigil{
+    display: block;
+    object-fit: contain;
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
+    filter: invert(96%) sepia(8%) saturate(713%) hue-rotate(332deg) brightness(91%) contrast(87%);
+}
+
+.note{
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.book{
+    position: relative;
+    transition: all 0.35s ease-in-out;
+}
+
+.book::after{
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 100px;
+    transition: opacity 0.3s ease-in-out;
+    content: attr(data-title);
+    position: absolute;
+    top: 40%;
+    opacity: 0;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    pointer-events: none;
+    text-shadow: 1px 5px 7px rgba(107,102,96,0.58);
+}
+
+.book:hover{
+    transform: scale(1.04);
+
+}
+
+.book:hover::after{
+    opacity: 1;
+}
+
+
+
+.ink-animation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-image: url(images/ink_transition.webp);
+    background-repeat: no-repeat;
+    background-size: 3900% 100%;
+    animation: inkOpen 1.1s steps(39) forwards;
+    pointer-events: none;
+    background-position: left top;
+}
+
+.ink-animation-reverse{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-image: url(images/ink_transition.webp);
+    background-repeat: no-repeat;
+    background-size: 3900% 100%;
+    animation: inkOpen 1.1s steps(39) reverse forwards;
+    pointer-events: none;
+    background-position: left top;
+}
+
+.ink-animation-low{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-image: url(images/ink-transition-low.png);
+    background-repeat: no-repeat;
+    background-size: 3800% 100%; 
+    animation: inkOpen 1s steps(39) forwards;
+    background-position: left top;
+    pointer-events: none;
+}
+
+@keyframes inkOpen {
+    from {
+      background-position: left top;
+    }
+    to {
+      background-position: right top;
+    }
+  }
+
+
+
+.scroll{
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 1.3s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+.scroll-show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+#blackout{
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}

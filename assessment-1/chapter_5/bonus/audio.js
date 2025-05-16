@@ -26,11 +26,9 @@ let currentPage = 0;
 function buttons() {
     const buttonGrid = document.querySelector(".button-grid");
     buttonGrid.innerHTML = "";
-
     const startIndex = currentPage * buttonCount;
     const endIndex = startIndex + buttonCount;
     const visibleFiles = audioFiles.slice(startIndex, endIndex);
-
     visibleFiles.forEach(file => {
         const button = document.createElement("button");
         button.classList.add("audio-button");
@@ -42,11 +40,9 @@ function buttons() {
         });
         buttonGrid.appendChild(button);
     });
-
     document.getElementById("prev").style.display = currentPage === 0 ? "none" : "inline-block";
     const totalPages = Math.ceil(audioFiles.length / buttonCount);
     document.getElementById("next").style.display = currentPage === totalPages - 1 ? "none" : "inline-block"; "inline-block";
-
 }
 
 document.getElementById("prev").addEventListener("click", () => {
